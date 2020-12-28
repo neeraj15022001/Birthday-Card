@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&display=swap');
+* {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  overflow: hidden;
+  background-color: #FBF4D7;
+}
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#flipbook {
+  width: 800px;
+  height: 600px;
+}
+.main-page {
+  background-attachment: fixed;
+  color: white;
+}
+#flipbook .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 600px !important;
+  background-color: #FBF4D7;
+  user-select: none;
+}
+.container {
+  box-sizing: border-box;
+  padding: 2rem;
+  height: 100%;
+}
+.container > h1 {
+    font-family: 'Pacifico', cursive !important;
+}
+.container > p {
+    font-family: 'Indie Flower', cursive !important;
+}
+.wish {
+    font-family: 'Indie Flower', cursive !important;
+    font-size: x-large !important;
+}
+#flipbook .shadow,
+#flipbook.shadow {
+  -webkit-box-shadow: 0 4px 10px #666;
+  -moz-box-shadow: 0 4px 10px #666;
+  -ms-box-shadow: 0 4px 10px #666;
+  -o-box-shadow: 0 4px 10px #666;
+  box-shadow: 0 4px 10px #666;
+}
+#flipbook .page-wrapper {
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -ms-perspective: 2000px;
+  perspective: 2000px;
+}
+.play-button {
+    border-radius: 50%;
+    border: 1px solid #ff4fcd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+.play-button > img {
+    fill: #ff4fcd;
+}

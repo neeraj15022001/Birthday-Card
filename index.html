@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Birthday Card</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./turn.min.js"></script>
+    <script src="./protect.js"></script>
+  </head>
+  <body oncontextmenu="return false">
+    <div class="wrapper">
+      <div id="flipbook">
+        <div class="hard main-page"><img src="./front.png" alt="front" /></div>
+        <div class="hard">
+          <!-- <div class="container"> -->
+          <!-- </div> -->
+          <img src="./2nd.png" width="500px" alt="2nd">
+        </div>
+        <div class="hard">
+          <img src="./3rdpage.png" alt="3rd">
+        </div>
+        <div class="hard">
+          <img src="./back.png" alt="back" />
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $("#flipbook").turn({
+        gradients: true,
+        elevation: 0,
+        acceleration: true,
+      });
+      $(".music").hide();
+      $(".play-button").click(() => {
+        $(".music")[0].play();
+      });
+      $(window).on("load", function () {
+        console.log("here");
+        $(".play-button").trigger("click");
+      });
+    </script>
+  </body>
+</html>
